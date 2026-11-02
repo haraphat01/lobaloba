@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="The Luxury Crystal Collection">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dabd95"/>
+      <stop offset=".5" stop-color="#b79a72"/>
+      <stop offset="1" stop-color="#8a6d45"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset=".18" stop-color="#000" stop-opacity=".18"/>
+      <stop offset=".32" stop-color="#fff" stop-opacity=".18"/>
+      <stop offset=".5" stop-color="#000" stop-opacity=".12"/>
+      <stop offset=".68" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset=".84" stop-color="#000" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".08"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cbae86"/><stop offset="1" stop-color="#8f724a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".3" cy=".2" r=".9">
+      <stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <pattern id="p" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M22 6 L28 22 L22 38 L16 22 Z" fill="#ffffff" opacity=".22"/>
+      <path d="M22 14 L25 22 L22 30 L19 22 Z" fill="#ffffff" opacity=".5"/>
+      <circle cx="4" cy="4" r="2" fill="#fff" opacity=".7"/><circle cx="40" cy="40" r="1.6" fill="#fff" opacity=".6"/>
+      <circle cx="40" cy="6" r="1.2" fill="#ffeac2" opacity=".8"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#p)"/><rect width="800" height="1000" fill="url(#fold)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  
+</svg>

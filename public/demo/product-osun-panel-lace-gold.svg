@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Ọ̀ṣun Panel Lace in Gold">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eac371"/>
+      <stop offset=".5" stop-color="#c7a04e"/>
+      <stop offset="1" stop-color="#9a7321"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset=".18" stop-color="#000" stop-opacity=".18"/>
+      <stop offset=".32" stop-color="#fff" stop-opacity=".18"/>
+      <stop offset=".5" stop-color="#000" stop-opacity=".12"/>
+      <stop offset=".68" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset=".84" stop-color="#000" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".08"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dbb462"/><stop offset="1" stop-color="#9f7826"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".3" cy=".2" r=".9">
+      <stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <pattern id="p" width="80" height="80" patternUnits="userSpaceOnUse">
+      <rect width="80" height="80" fill="none"/>
+      <path d="M40 8 C52 24 52 56 40 72 C28 56 28 24 40 8Z" fill="#f9d280" opacity=".35"/>
+      <path d="M8 40 C24 28 56 28 72 40 C56 52 24 52 8 40Z" fill="#eac371" opacity=".3"/>
+      <circle cx="40" cy="40" r="5" fill="#fffaa8" opacity=".6"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#p)"/><rect width="800" height="1000" fill="url(#fold)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Auto-Tie Gele Headwrap in Gold">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ebc470"/>
+      <stop offset=".5" stop-color="#c8a14d"/>
+      <stop offset="1" stop-color="#9b7420"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset=".18" stop-color="#000" stop-opacity=".18"/>
+      <stop offset=".32" stop-color="#fff" stop-opacity=".18"/>
+      <stop offset=".5" stop-color="#000" stop-opacity=".12"/>
+      <stop offset=".68" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset=".84" stop-color="#000" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".08"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dcb561"/><stop offset="1" stop-color="#a07925"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".3" cy=".2" r=".9">
+      <stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <pattern id="p" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="3.4" fill="#ffe793" opacity=".7"/>
+      <circle cx="21" cy="21" r="3.4" fill="#ffe793" opacity=".7"/>
+      <circle cx="6" cy="6" r="1.1" fill="#fff" opacity=".8"/><circle cx="20" cy="20" r="1.1" fill="#fff" opacity=".8"/>
+      <path d="M0 14 Q7 10 14 14 T28 14" stroke="#f5ce7a" fill="none" opacity=".4"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="#f5efe6" opacity=".55"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <g transform="translate(400 460)" fill="none">
+            <path d="M-210 -80 Q0 260 210 -80" stroke="#d8b878" stroke-width="10" opacity=".9"/>
+            <circle cx="-210.0" cy="-80.0" r="14" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="-180.0" cy="-57.4" r="17" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="-150.0" cy="-38.4" r="20" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="-120.0" cy="-22.8" r="14" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="-90.0" cy="-10.6" r="17" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="-60.0" cy="-1.9" r="20" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="-30.0" cy="3.3" r="14" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="0.0" cy="5.0" r="17" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="30.0" cy="3.3" r="20" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="60.0" cy="-1.9" r="14" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="90.0" cy="-10.6" r="17" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="120.0" cy="-22.8" r="20" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="150.0" cy="-38.4" r="14" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="180.0" cy="-57.4" r="17" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/><circle cx="210.0" cy="-80.0" r="20" fill="#c8a14d" stroke="#fad37f" stroke-width="3"/>
+            <path d="M0 160 l26 50 l-26 40 l-26 -40z" fill="#d8b878"/>
+          </g>
+</svg>
