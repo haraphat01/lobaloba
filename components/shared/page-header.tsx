@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { JsonLd } from "@/components/shared/json-ld";
+import { siteUrl } from "@/lib/site-url";
 
 export type Crumb = { label: string; href?: string };
 
 export function Breadcrumbs({ items }: { items: Crumb[] }) {
   const all = [{ label: "Home", href: "/" }, ...items];
-  const site = process.env.NEXT_PUBLIC_SITE_URL ?? "";
+  const site = siteUrl;
   return (
     <>
       <nav aria-label="Breadcrumb" className="text-[0.7rem] tracking-[0.14em] text-muted-foreground uppercase">

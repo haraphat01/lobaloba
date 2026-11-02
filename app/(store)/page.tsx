@@ -10,6 +10,7 @@ import { getCategories, getCollections, getProducts } from "@/lib/data/catalog";
 import { getBlogPosts } from "@/lib/data/content";
 import { getSettings } from "@/lib/data/settings";
 import { formatDate } from "@/lib/format";
+import { siteUrl } from "@/lib/site-url";
 
 export default async function HomePage() {
   const [settings, categories, collections, newArrivals, bestsellers, posts] = await Promise.all([
@@ -22,7 +23,6 @@ export default async function HomePage() {
   ]);
   const { hero, homepage, business } = settings;
   const featured = collections.filter((c) => c.is_featured);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "";
 
   return (
     <>

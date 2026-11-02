@@ -1,4 +1,5 @@
 import "server-only";
+import { siteUrl } from "@/lib/site-url";
 
 // Server-side environment access. Secret values are only ever read here and
 // never passed to Client Components.
@@ -15,7 +16,7 @@ function required(name: string): string {
 }
 
 export const env = {
-  siteUrl: () => (optional("NEXT_PUBLIC_SITE_URL") ?? "http://localhost:3000").replace(/\/$/, ""),
+  siteUrl: () => siteUrl,
   supabaseUrl: () => required("NEXT_PUBLIC_SUPABASE_URL"),
   supabaseAnonKey: () => required("NEXT_PUBLIC_SUPABASE_ANON_KEY"),
   supabaseServiceRoleKey: () => required("SUPABASE_SERVICE_ROLE_KEY"),

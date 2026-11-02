@@ -9,6 +9,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { getBlogPost, getBlogPosts } from "@/lib/data/content";
 import { renderMarkdown } from "@/lib/markdown";
 import { formatDate } from "@/lib/format";
+import { siteUrl } from "@/lib/site-url";
 
 export async function generateMetadata({ params }: PageProps<"/journal/[slug]">): Promise<Metadata> {
   const { slug } = await params;
@@ -35,7 +36,7 @@ async function Article({ params }: Pick<PageProps<"/journal/[slug]">, "params">)
   const post = await getBlogPost(slug);
   if (!post) notFound();
   const related = (await getBlogPosts({ category: post.category?.slug, limit: 4 })).filter((p) => p.id !== post.id).slice(0, 3);
-  const site = process.env.NEXT_PUBLIC_SITE_URL ?? "";
+  const site = siteUrl;
   const url = `${site}/journal/${post.slug}`;
   const share = [
     { label: "WhatsApp", href: `https://wa.me/?text=${encodeURIComponent(`${post.title} ${url}`)}` },

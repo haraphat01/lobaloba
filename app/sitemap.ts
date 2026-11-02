@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { createPublicClient } from "@/lib/supabase/public";
+import { siteUrl } from "@/lib/site-url";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const site = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const site = siteUrl;
   const statics = ["", "/shop", "/new-arrivals", "/collections", "/asoebi", "/wholesale", "/journal", "/about", "/contact", "/help", "/faq", "/shipping", "/returns", "/fabric-care", "/yardage-guide", "/privacy", "/terms", "/track"].map(
     (path) => ({ url: `${site}${path}`, changeFrequency: "weekly" as const, priority: path === "" ? 1 : 0.6 }),
   );

@@ -14,6 +14,7 @@ import { getProductBySlug, getRelatedProducts } from "@/lib/data/catalog";
 import { getSettings } from "@/lib/data/settings";
 import { renderMarkdown } from "@/lib/markdown";
 import { formatDate } from "@/lib/format";
+import { siteUrl } from "@/lib/site-url";
 
 export async function generateMetadata({ params }: PageProps<"/products/[slug]">): Promise<Metadata> {
   const { slug } = await params;
@@ -41,7 +42,6 @@ async function ProductContent({ params }: Pick<PageProps<"/products/[slug]">, "p
   const [product, settings] = await Promise.all([getProductBySlug(slug), getSettings()]);
   if (!product) notFound();
   const related = await getRelatedProducts(product.id, product.category?.slug ?? null);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "";
 
   return (
     <>
