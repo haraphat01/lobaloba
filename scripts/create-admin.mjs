@@ -33,7 +33,15 @@ if (error) {
   userId = created.user.id;
 }
 
-const { data: roleRow } = await supabase.from("roles").select("id").eq("name", role).single();
+const { data: roleRow, error: roleErr } = await supabase.from("roles").select("id").eq("name", role).maybeSingle();
+if (roleErr || !roleRow) {
+  console.error(
+    roleErr?.code === "PGRST205"
+      ? "The database schema is missing. Push the migrations first: supabase link --project-ref <ref> && supabase db push"
+      : `Role "${role}" not found${roleErr ? `: ${roleErr.message}` : ""}. Have the migrations been applied?`,
+  );
+  process.exit(1);
+}
 const { error: upd } = await supabase.from("profiles").upsert({ id: userId, email, full_name: fullName, role_id: roleRow.id, is_active: true });
 if (upd) throw upd;
 console.log(`${email} is now ${role}.`);
