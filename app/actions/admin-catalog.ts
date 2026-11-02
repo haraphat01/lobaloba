@@ -341,8 +341,18 @@ export async function removeDemoData(): Promise<ActionResult> {
   const { count } = await supabase.from("products").select("id", { count: "exact", head: true }).eq("is_demo", true);
   await supabase.from("products").delete().eq("is_demo", true);
   await supabase.from("blog_posts").delete().eq("is_demo", true);
-  await supabase.from("categories").update({ image_url: null }).like("image_url", "/demo/%");
-  await supabase.from("collections").update({ image_url: null }).like("image_url", "/demo/%");
+  // Demo imagery is either bundled (/demo/…) or stock photos uploaded to media/demo-photos/.
+  for (const pattern of ["/demo/%", "%/media/demo-photos/%"]) {
+    await supabase.from("categories").update({ image_url: null }).like("image_url", pattern);
+    await supabase.from("collections").update({ image_url: null }).like("image_url", pattern);
+  }
+  const { data: hero } = await supabase.from("site_settings").select("value").eq("key", "hero").maybeSingle();
+  const heroValue = (hero?.value ?? {}) as Record<string, unknown>;
+  const heroImage = String(heroValue.image_url ?? "");
+  if (heroImage.startsWith("/demo/") || heroImage.includes("/media/demo-photos/")) {
+    await supabase.from("site_settings").update({ value: { ...heroValue, image_url: "" } }).eq("key", "hero");
+    updateTag("settings");
+  }
   updateTag("products");
   updateTag("categories");
   updateTag("collections");
