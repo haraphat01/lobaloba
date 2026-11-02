@@ -33,7 +33,7 @@ async function Content() {
           <tr key={p.id}>
             <Td>
               <Link href={`/admin/journal/${p.id}`} className="font-medium text-wine hover:underline">{p.title}</Link>
-              {p.is_demo && <span className="ml-2 rounded-sm bg-amber-100 px-1.5 text-[0.6rem] text-amber-900 uppercase">Demo</span>}
+              {p.is_demo && <span className="ml-2 rounded-sm bg-amber-500/15 px-1.5 text-[0.6rem] text-amber-300 uppercase">Demo</span>}
             </Td>
             <Td>{(p.blog_categories as unknown as { name: string } | null)?.name}</Td>
             <Td className="capitalize">{p.status}</Td>

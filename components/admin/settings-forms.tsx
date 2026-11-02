@@ -11,7 +11,7 @@ import type { SiteSettings } from "@/lib/data/settings";
 function SaveButton({ k, value }: { k: SettingKey; value: unknown }) {
   const { pending, run } = useAdminAction();
   return (
-    <button type="button" disabled={pending} onClick={() => run(() => saveSetting(k, value))} className="mt-4 h-9 rounded-sm bg-wine px-5 text-xs tracking-wider text-ivory uppercase">
+    <button type="button" disabled={pending} onClick={() => run(() => saveSetting(k, value))} className="mt-4 h-9 rounded-sm bg-wine px-5 text-xs tracking-wider text-onyx uppercase">
       {pending ? "Saving…" : "Save"}
     </button>
   );
@@ -108,7 +108,7 @@ export function PoliciesForm({ initial }: { initial: SiteSettings["policies"] })
     <Panel title="Policies & guides (Markdown)">
       <div className="mb-3 flex flex-wrap gap-1">
         {(Object.keys(POLICY_LABELS) as (keyof SiteSettings["policies"])[]).map((k) => (
-          <button key={k} type="button" onClick={() => setTab(k)} className={`rounded-sm px-3 py-1.5 text-xs ${tab === k ? "bg-wine text-ivory" : "border border-border"}`}>
+          <button key={k} type="button" onClick={() => setTab(k)} className={`rounded-sm px-3 py-1.5 text-xs ${tab === k ? "bg-wine text-onyx" : "border border-border"}`}>
             {POLICY_LABELS[k]}
           </button>
         ))}
@@ -172,7 +172,7 @@ export function PaymentForm({ initial, paystackConfigured }: { initial: SiteSett
   const [v, setV] = useState(initial);
   return (
     <Panel title="Payment configuration">
-      <p className={`mb-3 rounded-sm px-3 py-2 text-xs ${paystackConfigured ? "bg-emerald-50 text-emerald-900" : "bg-amber-50 text-amber-900"}`}>
+      <p className={`mb-3 rounded-sm px-3 py-2 text-xs ${paystackConfigured ? "bg-emerald-500/10 text-emerald-300" : "bg-amber-500/10 text-amber-300"}`}>
         Paystack secret key: {paystackConfigured ? "configured in environment" : "NOT configured — set PAYSTACK_SECRET_KEY (keys are never stored in the database)"}
       </p>
       <p className="mb-2 text-sm">Payment channels offered at checkout (must also be enabled on your Paystack account):</p>
@@ -191,7 +191,7 @@ export function EmailForm({ initial, resendConfigured, from }: { initial: SiteSe
   const [v, setV] = useState(initial);
   return (
     <Panel title="Email configuration">
-      <p className={`mb-3 rounded-sm px-3 py-2 text-xs ${resendConfigured ? "bg-emerald-50 text-emerald-900" : "bg-amber-50 text-amber-900"}`}>
+      <p className={`mb-3 rounded-sm px-3 py-2 text-xs ${resendConfigured ? "bg-emerald-500/10 text-emerald-300" : "bg-amber-500/10 text-amber-300"}`}>
         Resend API key: {resendConfigured ? "configured" : "NOT configured — set RESEND_API_KEY"} · Sending from: {from}
       </p>
       <div className="grid gap-3 sm:grid-cols-2">

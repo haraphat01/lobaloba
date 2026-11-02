@@ -57,7 +57,7 @@ export function ButtonLink({ href, children, variant = "primary" }: { href: stri
       href={href}
       className={cn(
         "inline-flex h-9 items-center gap-2 rounded-sm px-4 text-xs font-medium tracking-wider uppercase",
-        variant === "primary" ? "bg-wine text-ivory hover:bg-wine-deep" : "border border-border bg-card hover:border-wine",
+        variant === "primary" ? "bg-wine text-onyx hover:bg-gold-light" : "border border-border bg-card hover:border-wine",
       )}
     >
       {children}
@@ -75,4 +75,4 @@ export function Stat({ label, value, hint }: { label: string; value: string | nu
   );
 }
 
-export const adminInput = "w-full rounded-sm border border-input bg-white px-3 py-2 text-sm outline-none focus:border-wine focus:ring-2 focus:ring-gold/20";
+export const adminInput = "w-full rounded-sm border border-input bg-background px-3 py-2 text-sm outline-none focus:border-wine focus:ring-2 focus:ring-gold/20";

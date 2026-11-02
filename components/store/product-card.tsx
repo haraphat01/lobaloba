@@ -20,7 +20,7 @@ export function ProductCard({ product, priority = false }: { product: ProductCar
 
   return (
     <article className="group relative flex flex-col">
-      <div className="relative aspect-[0.8] overflow-hidden rounded-sm bg-[#f0e9df]">
+      <div className="relative aspect-[0.8] overflow-hidden rounded-sm bg-sand">
         <Link href={`/products/${product.slug}`} aria-label={product.name} className="absolute inset-0">
           <FabricImage
             src={primary?.url}
@@ -53,7 +53,7 @@ export function ProductCard({ product, priority = false }: { product: ProductCar
           onClick={() => toggleWishlist(product.id, product.name)}
           aria-label={saved ? `Remove ${product.name} from wishlist` : `Save ${product.name} to wishlist`}
           aria-pressed={saved}
-          className="absolute top-3 right-3 grid size-10 place-items-center rounded-full bg-[#fffdf9]/95 text-ink shadow-sm transition hover:bg-white hover:text-wine"
+          className="absolute top-3 right-3 grid size-10 place-items-center rounded-full bg-card/95 text-ink shadow-sm transition hover:bg-cream hover:text-wine"
         >
           <Heart className={cn("size-4", saved && "fill-wine text-wine")} />
         </button>
@@ -61,7 +61,7 @@ export function ProductCard({ product, priority = false }: { product: ProductCar
         <button
           type="button"
           onClick={() => setQuickOpen(true)}
-          className="absolute inset-x-3 bottom-3 flex translate-y-2 items-center justify-center gap-2 rounded-sm bg-[#fffdf9]/95 py-3 text-[0.68rem] font-medium tracking-[0.16em] uppercase opacity-0 shadow-sm transition duration-300 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 hover:bg-wine hover:text-ivory max-lg:translate-y-0 max-lg:opacity-100"
+          className="absolute inset-x-3 bottom-3 flex translate-y-2 items-center justify-center gap-2 rounded-sm bg-card/95 py-3 text-[0.68rem] font-medium tracking-[0.16em] uppercase opacity-0 shadow-sm transition duration-300 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 hover:bg-wine hover:text-ivory max-lg:translate-y-0 max-lg:opacity-100"
         >
           <Eye className="size-3.5" /> Quick view
         </button>
@@ -88,7 +88,7 @@ export function ProductCard({ product, priority = false }: { product: ProductCar
             ))}
             {product.colours.length > 5 && <span className="text-[0.65rem] text-muted-foreground">+{product.colours.length - 5}</span>}
           </div>
-          <span className={cn("text-[0.68rem]", outOfStock ? "text-destructive" : lowStock ? "text-gold" : "text-emerald-800")}>
+          <span className={cn("text-[0.68rem]", outOfStock ? "text-destructive" : lowStock ? "text-gold" : "text-emerald-300")}>
             {outOfStock ? "Out of stock" : lowStock ? "Low stock" : "In stock"}
           </span>
         </div>
@@ -104,10 +104,10 @@ function Badge({ children, tone = "ivory" }: { children: React.ReactNode; tone?:
     <span
       className={cn(
         "px-2 py-1 text-[0.6rem] font-medium tracking-[0.18em] uppercase",
-        tone === "ivory" && "bg-ivory text-wine",
-        tone === "gold" && "bg-gold text-ivory",
-        tone === "wine" && "bg-wine text-ivory",
-        tone === "muted" && "bg-charcoal/80 text-ivory",
+        tone === "ivory" && "bg-gold text-onyx",
+        tone === "gold" && "bg-gold text-onyx",
+        tone === "wine" && "bg-wine text-onyx",
+        tone === "muted" && "bg-charcoal/80 text-onyx",
       )}
     >
       {children}

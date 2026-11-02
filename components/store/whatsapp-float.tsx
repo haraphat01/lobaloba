@@ -13,7 +13,7 @@ export function WhatsAppFloat({ number }: { number: string }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
-      className="fixed right-4 bottom-4 z-40 flex items-center gap-2 rounded-full bg-wine px-4 py-3 text-sm font-medium text-ivory shadow-lg shadow-wine/20 transition hover:-translate-y-0.5 hover:bg-wine-deep sm:right-6 sm:bottom-6"
+      className="fixed right-4 bottom-4 z-40 flex items-center gap-2 rounded-full bg-wine px-4 py-3 text-sm font-medium text-onyx shadow-lg shadow-wine/20 transition hover:-translate-y-0.5 hover:bg-gold-light sm:right-6 sm:bottom-6"
     >
       <MessageCircle className="size-5" />
       <span className="hidden sm:inline">Chat with a stylist</span>

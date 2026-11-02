@@ -35,11 +35,11 @@ async function JournalList({ searchParams }: Pick<PageProps<"/journal">, "search
     <div className="container-x py-12">
       <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
         <nav aria-label="Journal categories" className="flex flex-wrap gap-2">
-          <Link href="/journal" className={cn("rounded-full border px-4 py-1.5 text-xs", !category ? "border-wine bg-wine text-ivory" : "border-border hover:border-wine")}>
+          <Link href="/journal" className={cn("rounded-full border px-4 py-1.5 text-xs", !category ? "border-wine bg-wine text-onyx" : "border-border hover:border-wine")}>
             All
           </Link>
           {categories.map((c) => (
-            <Link key={c.slug} href={`/journal?category=${c.slug}`} className={cn("rounded-full border px-4 py-1.5 text-xs", category === c.slug ? "border-wine bg-wine text-ivory" : "border-border hover:border-wine")}>
+            <Link key={c.slug} href={`/journal?category=${c.slug}`} className={cn("rounded-full border px-4 py-1.5 text-xs", category === c.slug ? "border-wine bg-wine text-onyx" : "border-border hover:border-wine")}>
               {c.name}
             </Link>
           ))}

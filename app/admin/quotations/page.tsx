@@ -40,7 +40,7 @@ async function List({ searchParams }: Pick<PageProps<"/admin/quotations">, "sear
             <option key={s} value={s}>{titleCase(s)}</option>
           ))}
         </select>
-        <button type="submit" className="rounded-sm bg-ink px-4 text-ivory">Filter</button>
+        <button type="submit" className="rounded-sm bg-wine px-4 text-onyx">Filter</button>
       </form>
       <Table head={["Reference", "Customer", "Type", "Event", "Status", "Total", "Received"]} empty={!data?.length}>
         {(data ?? []).map((r) => (

@@ -20,7 +20,7 @@ export function CategoryManager({ categories }: { categories: Category[] }) {
 
   return (
     <>
-      <button type="button" onClick={() => setEditing({ ...blank, sortOrder: categories.length + 1 })} className="mb-4 inline-flex h-9 items-center gap-2 rounded-sm bg-wine px-4 text-xs tracking-wider text-ivory uppercase">
+      <button type="button" onClick={() => setEditing({ ...blank, sortOrder: categories.length + 1 })} className="mb-4 inline-flex h-9 items-center gap-2 rounded-sm bg-wine px-4 text-xs tracking-wider text-onyx uppercase">
         <Plus className="size-4" /> Add category
       </button>
       <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
@@ -28,7 +28,7 @@ export function CategoryManager({ categories }: { categories: Category[] }) {
           <li key={c.id} className="overflow-hidden rounded-sm border border-border bg-card">
             <div className="relative aspect-[4/3] bg-cream">
               <FabricImage src={c.imageUrl} alt={c.name} fill sizes="300px" className="object-cover" />
-              {!c.isActive && <span className="absolute top-2 left-2 rounded-sm bg-charcoal px-2 py-0.5 text-[0.6rem] text-ivory uppercase">Inactive</span>}
+              {!c.isActive && <span className="absolute top-2 left-2 rounded-sm bg-charcoal px-2 py-0.5 text-[0.6rem] text-onyx uppercase">Inactive</span>}
             </div>
             <div className="p-3">
               <p className="font-medium">
@@ -92,7 +92,7 @@ export function CategoryManager({ categories }: { categories: Category[] }) {
                 SEO description
                 <textarea className={adminInput} rows={2} value={editing.seoDescription} onChange={(e) => setEditing({ ...editing, seoDescription: e.target.value })} />
               </label>
-              <button type="button" disabled={pending} onClick={() => run(() => saveCategory(editing), () => setEditing(null))} className="mt-2 h-10 rounded-sm bg-wine text-xs tracking-wider text-ivory uppercase">
+              <button type="button" disabled={pending} onClick={() => run(() => saveCategory(editing), () => setEditing(null))} className="mt-2 h-10 rounded-sm bg-wine text-xs tracking-wider text-onyx uppercase">
                 Save category
               </button>
             </div>

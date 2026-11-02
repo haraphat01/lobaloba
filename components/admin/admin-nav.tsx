@@ -35,7 +35,7 @@ function Links({ active, onNavigate }: { active?: string; onNavigate?: () => voi
             <Link
               href={href}
               onClick={onNavigate}
-              className={cn("flex items-center gap-3 rounded-sm px-3 py-2 text-sm transition", isActive ? "bg-wine text-ivory" : "text-ivory/75 hover:bg-ivory/10 hover:text-ivory")}
+              className={cn("flex items-center gap-3 rounded-sm px-3 py-2 text-sm transition", isActive ? "bg-wine text-onyx" : "text-ivory/75 hover:bg-ivory/10 hover:text-ivory")}
             >
               <Icon className="size-4" /> {label}
             </Link>

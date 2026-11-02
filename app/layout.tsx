@@ -35,15 +35,15 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#6e1f2f",
+  themeColor: "#0b0a09",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-NG" className={`${display.variable} ${body.variable} h-full antialiased`}>
+    <html lang="en-NG" className={`dark ${display.variable} ${body.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col" suppressHydrationWarning>
         {children}
-        <Toaster position="bottom-center" theme="light" />
+        <Toaster position="bottom-center" theme="dark" />
       </body>
     </html>
   );

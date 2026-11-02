@@ -20,7 +20,7 @@ export function CollectionManager({ collections, products }: { collections: Coll
 
   return (
     <>
-      <button type="button" onClick={() => setEditing(blank)} className="mb-4 inline-flex h-9 items-center gap-2 rounded-sm bg-wine px-4 text-xs tracking-wider text-ivory uppercase">
+      <button type="button" onClick={() => setEditing(blank)} className="mb-4 inline-flex h-9 items-center gap-2 rounded-sm bg-wine px-4 text-xs tracking-wider text-onyx uppercase">
         <Plus className="size-4" /> Add collection
       </button>
       <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -110,7 +110,7 @@ export function CollectionManager({ collections, products }: { collections: Coll
                     ))}
                 </ul>
               </div>
-              <button type="button" disabled={pending} onClick={() => run(() => saveCollection(editing), () => setEditing(null))} className="h-10 rounded-sm bg-wine text-xs tracking-wider text-ivory uppercase">
+              <button type="button" disabled={pending} onClick={() => run(() => saveCollection(editing), () => setEditing(null))} className="h-10 rounded-sm bg-wine text-xs tracking-wider text-onyx uppercase">
                 Save collection
               </button>
             </div>

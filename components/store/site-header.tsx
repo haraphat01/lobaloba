@@ -69,7 +69,7 @@ export function SiteHeader({
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 border-b bg-[#fffdf9]/95 backdrop-blur-xl transition-shadow supports-[backdrop-filter]:bg-[#fffdf9]/90",
+        "sticky top-0 z-40 border-b bg-card/95 backdrop-blur-xl transition-shadow supports-[backdrop-filter]:bg-card/90",
         scrolled ? "border-border/80 shadow-[0_8px_30px_-20px_rgba(74,18,32,0.35)]" : "border-transparent",
       )}
     >
@@ -115,7 +115,7 @@ export function SiteHeader({
             href={wa}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-1 hidden items-center gap-1.5 rounded-full bg-wine px-3 py-2 text-[0.7rem] font-medium tracking-wider text-ivory uppercase transition hover:bg-wine-deep md:inline-flex"
+            className="ml-1 hidden items-center gap-1.5 rounded-full bg-wine px-3 py-2 text-[0.7rem] font-medium tracking-wider text-onyx uppercase transition hover:bg-gold-light md:inline-flex"
           >
             <MessageCircle className="size-4" /> WhatsApp
           </a>
@@ -151,7 +151,7 @@ export function SiteHeader({
       </nav>
 
       <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
-        <SheetContent side="left" className="w-[88vw] max-w-sm overflow-y-auto bg-ivory p-0">
+        <SheetContent side="left" className="w-[88vw] max-w-sm overflow-y-auto bg-background p-0">
           <SheetHeader className="flex-row items-center justify-between border-b border-border px-5 py-4">
             <SheetTitle className="font-serif text-xl text-wine">Menu</SheetTitle>
           </SheetHeader>
@@ -208,7 +208,7 @@ export function SiteHeader({
 
 function Count({ n }: { n: number }) {
   return (
-    <span className="absolute -top-0.5 -right-0.5 grid min-w-4 place-items-center rounded-full bg-wine px-1 text-[0.6rem] leading-4 font-semibold text-ivory">
+    <span className="absolute -top-0.5 -right-0.5 grid min-w-4 place-items-center rounded-full bg-wine px-1 text-[0.6rem] leading-4 font-semibold text-onyx">
       {n > 99 ? "99+" : n}
     </span>
   );

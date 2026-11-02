@@ -56,7 +56,7 @@ async function Orders({ searchParams }: Pick<PageProps<"/admin/orders">, "search
         </select>
         <input type="date" name="from" defaultValue={f.from} aria-label="From" className="rounded-sm border border-border bg-card px-3 py-2" />
         <input type="date" name="to" defaultValue={f.to} aria-label="To" className="rounded-sm border border-border bg-card px-3 py-2" />
-        <button type="submit" className="rounded-sm bg-ink px-4 text-ivory">Filter</button>
+        <button type="submit" className="rounded-sm bg-wine px-4 text-onyx">Filter</button>
         <Link href="/admin/orders" className="self-center text-xs underline">Reset</Link>
       </form>
       <Table head={["Order", "Customer", "Items", "Status", "Payment", "Total", "Placed"]} empty={orders.length === 0}>

@@ -35,7 +35,7 @@ export function ReviewModeration({ reviews }: { reviews: Review[] }) {
           {r.title && <p className="mt-2 font-medium">{r.title}</p>}
           <p className="mt-1 text-muted-foreground">{r.body}</p>
           <div className="mt-3 flex gap-3 text-xs">
-            <span className={r.is_approved ? "text-emerald-700" : "text-amber-700"}>{r.is_approved ? "Published" : "Awaiting approval"}</span>
+            <span className={r.is_approved ? "text-emerald-400" : "text-amber-400"}>{r.is_approved ? "Published" : "Awaiting approval"}</span>
             {r.is_approved ? (
               <button type="button" disabled={pending} onClick={() => act(r.id, "hide")} className="underline">Hide</button>
             ) : (

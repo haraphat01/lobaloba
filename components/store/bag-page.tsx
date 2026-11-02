@@ -26,7 +26,7 @@ export function BagPage() {
     <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_380px] lg:gap-12">
       <div>{loading && !details ? <BagSkeleton /> : <ul className="divide-y divide-border border-y border-border">{details?.lines.map((l) => <BagLineItem key={l.variantId} line={l} />)}</ul>}</div>
       {details && (
-      <aside className="h-fit space-y-3 rounded-sm border border-border border-t-2 border-t-wine bg-[#fffdf9] p-5 sm:p-6 lg:sticky lg:top-36">
+      <aside className="h-fit space-y-3 rounded-sm border border-border border-t-2 border-t-wine bg-card p-5 sm:p-6 lg:sticky lg:top-36">
         <h2 className="font-serif text-2xl text-wine">Your summary</h2>
           <SummaryRow label="Subtotal" value={formatMoney(details.subtotal, details.currency)} />
           <SummaryRow label="Shipping estimate" value={details.shippingFrom !== null ? `from ${formatMoney(details.shippingFrom, details.currency)}` : "At checkout"} />

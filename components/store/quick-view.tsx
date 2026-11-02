@@ -30,7 +30,7 @@ export function QuickView({ slug, open, onOpenChange }: { slug: string; open: bo
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-h-[92vh] max-w-4xl gap-0 overflow-y-auto rounded-none bg-ivory p-0 sm:max-w-4xl">
+      <DialogContent className="max-h-[92vh] max-w-4xl gap-0 overflow-y-auto rounded-none bg-background p-0 sm:max-w-4xl">
         {!product ? (
           <div className="grid h-80 place-items-center">
             <DialogTitle className="sr-only">Loading product</DialogTitle>

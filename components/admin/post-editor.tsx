@@ -44,8 +44,8 @@ export function PostEditor({ post, categories }: { post: Post; categories: { id:
           <p className="mb-3 text-sm">Status: <strong className="capitalize">{p.status}</strong></p>
           <label className="grid gap-1 text-sm">Publish date<input type="datetime-local" className={adminInput} value={p.publishedAt} onChange={(e) => setP({ ...p, publishedAt: e.target.value })} /></label>
           <div className="mt-3 flex gap-2">
-            <button type="button" disabled={pending} onClick={() => save("draft")} className="h-9 flex-1 rounded-sm border border-border bg-white text-xs uppercase tracking-wider">Save draft</button>
-            <button type="button" disabled={pending} onClick={() => save("published")} className="inline-flex h-9 flex-1 items-center justify-center gap-1 rounded-sm bg-wine text-xs uppercase tracking-wider text-ivory">
+            <button type="button" disabled={pending} onClick={() => save("draft")} className="h-9 flex-1 rounded-sm border border-border bg-background text-xs uppercase tracking-wider">Save draft</button>
+            <button type="button" disabled={pending} onClick={() => save("published")} className="inline-flex h-9 flex-1 items-center justify-center gap-1 rounded-sm bg-wine text-xs uppercase tracking-wider text-onyx">
               {pending && <Loader2 className="size-3 animate-spin" />} Publish
             </button>
           </div>

@@ -29,10 +29,10 @@ export function AnnouncementBar({ messages, link }: { messages: string[]; link?:
   );
 
   return (
-    <div className="bg-wine text-[0.64rem] tracking-[0.14em] text-ivory uppercase">
+    <div className="bg-wine text-[0.64rem] tracking-[0.14em] text-onyx uppercase">
       <div className="container-x flex h-8 items-center justify-center text-center sm:h-9">
         {link ? (
-          <Link href={link} className="min-w-0 hover:text-gold-light">
+          <Link href={link} className="min-w-0 hover:underline">
             {content}
           </Link>
         ) : (

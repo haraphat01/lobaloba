@@ -34,7 +34,7 @@ export function PackageEditor({ pkg }: { pkg: Pkg }) {
         type="button"
         disabled={pending}
         onClick={() => run(() => saveAsoebiPackage({ ...p, includedServices: p.includedServices.split("\n").map((s) => s.trim()).filter(Boolean) }))}
-        className="h-9 rounded-sm bg-wine text-xs tracking-wider text-ivory uppercase"
+        className="h-9 rounded-sm bg-wine text-xs tracking-wider text-onyx uppercase"
       >
         Save package
       </button>

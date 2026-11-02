@@ -29,7 +29,7 @@ export default async function HelpPage() {
       <div className="container-x py-14">
         <div className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
           {topics.map(({ href, icon: Icon, title, text }) => (
-            <Link key={href} href={href} className="group bg-ivory p-8 transition hover:bg-card">
+            <Link key={href} href={href} className="group bg-background p-8 transition hover:bg-card">
               <Icon className="size-6 text-gold" strokeWidth={1.3} />
               <p className="mt-4 font-serif text-2xl group-hover:text-wine">{title}</p>
               <p className="mt-1 text-sm text-muted-foreground">{text}</p>
@@ -37,10 +37,10 @@ export default async function HelpPage() {
           ))}
         </div>
         {business.whatsapp && (
-          <div className="mt-14 flex flex-col items-center gap-4 bg-wine p-10 text-center text-ivory">
+          <div className="mt-14 flex flex-col items-center gap-4 border border-gold/30 bg-card p-10 text-center text-ivory">
             <p className="font-serif text-3xl">Prefer to talk to someone?</p>
             <p className="text-ivory/80">Our stylists are available on WhatsApp {business.hours ? `· ${business.hours}` : ""}</p>
-            <a href={whatsappLink(business.whatsapp, "Hello Lobaloba Deluxe, I need some help.")} target="_blank" rel="noopener noreferrer" className="bg-ivory px-8 py-3.5 text-xs tracking-[0.22em] text-wine uppercase">
+            <a href={whatsappLink(business.whatsapp, "Hello Lobaloba Deluxe, I need some help.")} target="_blank" rel="noopener noreferrer" className="bg-gold px-8 py-3.5 text-xs tracking-[0.22em] text-onyx uppercase">
               Chat on WhatsApp
             </a>
           </div>

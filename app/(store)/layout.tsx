@@ -14,7 +14,7 @@ export default async function StoreLayout({ children }: LayoutProps<"/">) {
 
   return (
     <StoreProvider>
-      <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-ivory focus:px-4 focus:py-2">
+      <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-gold focus:text-onyx focus:px-4 focus:py-2">
         Skip to content
       </a>
       {settings.announcement.enabled && <AnnouncementBar messages={settings.announcement.messages} link={settings.announcement.link} />}

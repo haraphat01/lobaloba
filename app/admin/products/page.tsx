@@ -98,7 +98,7 @@ async function ProductList({ searchParams }: Pick<PageProps<"/admin/products">, 
           <option value="low">Low stock</option>
           <option value="out">Out of stock</option>
         </select>
-        <button type="submit" className="rounded-sm bg-ink px-4 text-ivory">Filter</button>
+        <button type="submit" className="rounded-sm bg-wine px-4 text-onyx">Filter</button>
       </form>
       <Table head={["", "Product", "Category", "Price", "Stock", "Flags", "Status"]} empty={products.length === 0}>
         {products.map((p) => (
@@ -112,14 +112,14 @@ async function ProductList({ searchParams }: Pick<PageProps<"/admin/products">, 
               <Link href={`/admin/products/${p.id}`} className="font-medium text-wine hover:underline">
                 {p.name}
               </Link>
-              {p.is_demo && <span className="ml-2 rounded-sm bg-amber-100 px-1.5 py-0.5 text-[0.6rem] text-amber-900 uppercase">Demo</span>}
+              {p.is_demo && <span className="ml-2 rounded-sm bg-amber-500/15 px-1.5 py-0.5 text-[0.6rem] text-amber-300 uppercase">Demo</span>}
             </Td>
             <Td>{p.category_name}</Td>
             <Td>
               {formatMoney(p.price, p.currency)}
               <span className="block text-xs text-muted-foreground">{unitLabel(p.purchase_unit, p.unit_label)}</span>
             </Td>
-            <Td className={p.total_stock === 0 ? "text-destructive" : p.total_stock <= p.low_stock_threshold ? "text-amber-700" : ""}>{p.total_stock}</Td>
+            <Td className={p.total_stock === 0 ? "text-destructive" : p.total_stock <= p.low_stock_threshold ? "text-amber-400" : ""}>{p.total_stock}</Td>
             <Td className="text-xs">{[p.is_featured && "Featured", p.is_new_arrival && "New", p.is_bestseller && "Bestseller"].filter(Boolean).join(" · ")}</Td>
             <Td className="capitalize">{p.status}</Td>
           </tr>

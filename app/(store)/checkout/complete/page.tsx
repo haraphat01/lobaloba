@@ -89,7 +89,7 @@ async function Confirmation({ searchParams }: Pick<PageProps<"/checkout/complete
         <OrderTimeline order={order} />
         <OrderSummary order={order} />
         <div className="flex flex-wrap justify-center gap-4">
-          <Link href={trackHref} className="bg-wine px-8 py-4 text-xs tracking-[0.22em] text-ivory uppercase">
+          <Link href={trackHref} className="bg-wine px-8 py-4 text-xs tracking-[0.22em] text-onyx uppercase">
             Track this order
           </Link>
           <Link href="/shop" className="border border-ink px-8 py-4 text-xs tracking-[0.22em] uppercase">
@@ -109,7 +109,7 @@ function Failure({ message, retryHref }: { message: string; retryHref?: string }
       <p className="mt-4 text-muted-foreground">{message}</p>
       <div className="mt-8 flex justify-center gap-4">
         {retryHref && (
-          <Link href={retryHref} className="bg-wine px-8 py-4 text-xs tracking-[0.22em] text-ivory uppercase">
+          <Link href={retryHref} className="bg-wine px-8 py-4 text-xs tracking-[0.22em] text-onyx uppercase">
             Try payment again
           </Link>
         )}

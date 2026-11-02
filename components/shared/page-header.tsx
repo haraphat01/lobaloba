@@ -46,7 +46,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
 
 export function PageHeader({ eyebrow, title, description, crumbs }: { eyebrow?: string; title: string; description?: string; crumbs?: Crumb[] }) {
   return (
-    <section className="relative overflow-hidden border-b border-border bg-[#f3ede4]">
+    <section className="relative overflow-hidden border-b border-border bg-cream">
       <div className="container-x relative py-9 sm:py-12 lg:py-14">
         {crumbs && <Breadcrumbs items={crumbs} />}
         <div className={crumbs ? "mt-6 max-w-4xl sm:mt-8" : "max-w-4xl"}>

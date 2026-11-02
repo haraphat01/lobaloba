@@ -86,7 +86,7 @@ function FilterPanel({ facets, categories, showCategories }: { facets: Facets; c
           <input value={min} onChange={(e) => setMin(e.target.value.replace(/\D/g, ""))} inputMode="numeric" placeholder="Min" aria-label="Minimum price" className="h-10 w-full rounded-sm border border-input bg-card px-2.5 text-xs" />
           <span>–</span>
           <input value={max} onChange={(e) => setMax(e.target.value.replace(/\D/g, ""))} inputMode="numeric" placeholder={facets.maxPrice ? String(facets.maxPrice) : "Max"} aria-label="Maximum price" className="h-10 w-full rounded-sm border border-input bg-card px-2.5 text-xs" />
-          <button type="submit" className="h-10 rounded-sm bg-wine px-3 text-xs text-ivory transition hover:bg-wine-deep">Go</button>
+          <button type="submit" className="h-10 rounded-sm bg-wine px-3 text-xs text-onyx transition hover:bg-gold-light">Go</button>
         </form>
         {facets.maxPrice > 0 && <p className="mt-2 text-xs text-muted-foreground">Up to {formatMoney(facets.maxPrice)}</p>}
       </FilterGroup>
@@ -100,7 +100,7 @@ function FilterPanel({ facets, categories, showCategories }: { facets: Facets; c
                 type="button"
                 onClick={() => toggleList("colour", c)}
                 aria-pressed={colours.includes(c)}
-                className={cn("rounded-full border px-3 py-1.5 text-xs transition", colours.includes(c) ? "border-wine bg-wine text-ivory" : "border-border bg-card hover:border-wine")}
+                className={cn("rounded-full border px-3 py-1.5 text-xs transition", colours.includes(c) ? "border-wine bg-wine text-onyx" : "border-border bg-card hover:border-wine")}
               >
                 {c}
               </button>
@@ -198,7 +198,7 @@ export function ShopToolbar({
       </label>
 
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side="left" className="w-[88vw] max-w-sm overflow-y-auto bg-ivory p-6">
+        <SheetContent side="left" className="w-[88vw] max-w-sm overflow-y-auto bg-background p-6">
           <SheetHeader className="mb-6 p-0">
             <SheetTitle className="font-serif text-2xl font-normal">Filter</SheetTitle>
           </SheetHeader>
@@ -229,7 +229,7 @@ export function Pagination({ page, pageCount }: { page: number; pageCount: numbe
           key={p}
           href={href(p)}
           aria-current={p === page ? "page" : undefined}
-          className={cn("grid size-10 place-items-center rounded-sm border text-sm transition", p === page ? "border-wine bg-wine text-ivory" : "border-border bg-card hover:border-wine")}
+          className={cn("grid size-10 place-items-center rounded-sm border text-sm transition", p === page ? "border-wine bg-wine text-onyx" : "border-border bg-card hover:border-wine")}
         >
           {p}
         </Link>

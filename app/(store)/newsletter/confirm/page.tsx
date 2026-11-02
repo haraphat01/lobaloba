@@ -32,7 +32,7 @@ async function Confirm({ searchParams }: Pick<PageProps<"/newsletter/confirm">, 
     <>
       <h1 className="text-5xl">{ok ? "You're subscribed" : "Link not valid"}</h1>
       <p className="mt-4 text-muted-foreground">{ok ? "Welcome to the Lobaloba circle. Look out for new arrivals and private sale invitations." : "This confirmation link is invalid or has already been used."}</p>
-      <Link href="/shop" className="mt-8 inline-block bg-wine px-8 py-4 text-xs tracking-[0.22em] text-ivory uppercase">
+      <Link href="/shop" className="mt-8 inline-block bg-wine px-8 py-4 text-xs tracking-[0.22em] text-onyx uppercase">
         Explore the collection
       </Link>
     </>

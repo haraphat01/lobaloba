@@ -5,7 +5,7 @@ import { formatMoney } from "@/lib/format";
 
 type Point = { bucket: string; revenue: number; orders: number };
 
-const BAR = "#9a3a4c"; // validated against the card surface (lightness band + 3:1 contrast)
+const BAR = "#b08a3e"; // validated against the dark card surface (lightness band + 3:1 contrast)
 
 function label(bucket: string, unit: string) {
   const d = new Date(bucket);
@@ -96,7 +96,7 @@ export function RevenueChart({ data, unit, currency = "NGN" }: { data: Point[]; 
             </div>
             {hover !== null && data[hover] && (
               <div
-                className="pointer-events-none absolute -top-2 z-10 -translate-x-1/2 -translate-y-full rounded-sm border border-border bg-white px-3 py-2 text-xs shadow-lg"
+                className="pointer-events-none absolute -top-2 z-10 -translate-x-1/2 -translate-y-full rounded-sm border border-border bg-background px-3 py-2 text-xs shadow-lg"
                 style={{ left: `${((hover + 0.5) / data.length) * 100}%` }}
               >
                 <p className="font-semibold text-ink">{formatMoney(data[hover].revenue, currency)}</p>

@@ -133,7 +133,7 @@ export function EventEditor({ event, products }: { event: EditableEvent; product
                 else router.refresh();
               })
             }
-            className="mt-3 inline-flex h-10 w-full items-center justify-center gap-2 rounded-sm bg-wine text-xs tracking-wider text-ivory uppercase"
+            className="mt-3 inline-flex h-10 w-full items-center justify-center gap-2 rounded-sm bg-wine text-xs tracking-wider text-onyx uppercase"
           >
             {pending && <Loader2 className="size-4 animate-spin" />} Save event
           </button>

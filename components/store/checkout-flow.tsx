@@ -140,7 +140,7 @@ export function CheckoutFlow({
         <ol className="mb-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-[0.68rem] tracking-[0.18em] uppercase" aria-label="Checkout progress">
           {STEPS.map((label, i) => (
             <li key={label} className={cn("flex items-center gap-2", i === step ? "text-wine" : i < step ? "text-ink" : "text-muted-foreground")}>
-              <span className={cn("grid size-6 place-items-center rounded-full border text-[0.65rem]", i < step ? "border-wine bg-wine text-ivory" : i === step ? "border-wine" : "border-border")}>
+              <span className={cn("grid size-6 place-items-center rounded-full border text-[0.65rem]", i < step ? "border-wine bg-wine text-onyx" : i === step ? "border-wine" : "border-border")}>
                 {i < step ? <Check className="size-3" /> : i + 1}
               </span>
               {i < step ? (
@@ -352,7 +352,7 @@ export function CheckoutFlow({
             <li key={l.variantId} className="flex gap-3 py-3">
               <div className="relative h-16 w-13 shrink-0 bg-cream">
                 <FabricImage src={l.imageUrl} alt={l.productName} fill sizes="52px" className="object-cover" />
-                <span className="absolute -top-2 -right-2 grid size-5 place-items-center rounded-full bg-charcoal text-[0.6rem] text-ivory">{l.quantity}</span>
+                <span className="absolute -top-2 -right-2 grid size-5 place-items-center rounded-full bg-charcoal text-[0.6rem] text-onyx">{l.quantity}</span>
               </div>
               <div className="min-w-0 flex-1 text-sm">
                 <p className="truncate font-medium">{l.productName}</p>

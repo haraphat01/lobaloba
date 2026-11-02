@@ -23,7 +23,7 @@ export function OrderTimeline({ order }: { order: Pick<OrderView, "status" | "or
               {i < ORDER_PROGRESS.length - 1 && (
                 <span aria-hidden className={cn("absolute top-7 left-3.5 h-full w-px sm:top-3.5 sm:left-1/2 sm:h-px sm:w-full", i < lastProgress ? "bg-wine" : "bg-border")} />
               )}
-              <span className={cn("relative z-10 grid size-7 shrink-0 place-items-center rounded-full border-2", done ? "border-wine bg-wine text-ivory" : "border-border bg-ivory text-border", current && "ring-4 ring-gold/30")}>
+              <span className={cn("relative z-10 grid size-7 shrink-0 place-items-center rounded-full border-2", done ? "border-wine bg-wine text-onyx" : "border-border bg-background text-border", current && "ring-4 ring-gold/30")}>
                 {done ? <Check className="size-3.5" /> : <Circle className="size-2" />}
               </span>
               <div className="sm:mt-3">

@@ -420,7 +420,7 @@ export function ProductEditor({ product, categories }: { product: EditableProduc
             ))}
           </div>
           {error && <p className="mt-3 text-sm text-destructive">{error}</p>}
-          <button type="button" onClick={save} disabled={pending} className="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-sm bg-wine text-xs tracking-wider text-ivory uppercase hover:bg-wine-deep">
+          <button type="button" onClick={save} disabled={pending} className="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-sm bg-wine text-xs tracking-wider text-onyx uppercase hover:bg-gold-light">
             {pending ? <Loader2 className="size-4 animate-spin" /> : <Plus className="size-4" />} {p.id ? "Save changes" : "Create product"}
           </button>
           {p.id && (

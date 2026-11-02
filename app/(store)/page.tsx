@@ -40,7 +40,7 @@ export default async function HomePage() {
       />
 
       {/* A. Hero */}
-      <section className="overflow-hidden bg-[#f3ede4]">
+      <section className="overflow-hidden bg-cream">
         <div className="container-x grid items-center gap-7 py-6 sm:gap-9 sm:py-12 lg:min-h-[680px] lg:grid-cols-[1.03fr_0.97fr] lg:gap-12 lg:py-12">
           <div className="relative z-10 py-2 sm:py-4 lg:py-10">
             <p className="eyebrow flex items-center gap-3 text-wine">
@@ -57,7 +57,7 @@ export default async function HomePage() {
             </h1>
             <p className="mt-5 max-w-md text-base leading-7 text-charcoal sm:mt-7 sm:text-lg sm:leading-8">{hero.subheading}</p>
             <div className="mt-6 flex flex-wrap items-center gap-2 sm:mt-8 sm:gap-3">
-              <Link href={hero.primary_cta.href} className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-wine px-4 text-[0.64rem] font-medium tracking-[0.1em] text-ivory uppercase transition hover:bg-wine-deep sm:min-h-13 sm:gap-3 sm:px-7 sm:text-[0.7rem] sm:tracking-[0.16em]">
+              <Link href={hero.primary_cta.href} className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-wine px-4 text-[0.64rem] font-medium tracking-[0.1em] text-onyx uppercase transition hover:bg-gold-light sm:min-h-13 sm:gap-3 sm:px-7 sm:text-[0.7rem] sm:tracking-[0.16em]">
                 {hero.primary_cta.label} <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link href={hero.secondary_cta.href} className="inline-flex min-h-12 items-center justify-center border-b border-wine/30 px-2 text-[0.62rem] font-medium tracking-[0.08em] text-wine uppercase transition hover:border-wine sm:min-h-13 sm:px-3 sm:text-[0.7rem] sm:tracking-[0.14em]">
@@ -66,9 +66,9 @@ export default async function HomePage() {
             </div>
             <div className="mt-6 hidden items-center gap-3 text-xs text-muted-foreground sm:flex lg:mt-10">
               <span className="flex -space-x-2">
-                <span className="size-7 rounded-full border-2 border-[#f3ede4] bg-gold/70" />
-                <span className="size-7 rounded-full border-2 border-[#f3ede4] bg-wine/65" />
-                <span className="size-7 rounded-full border-2 border-[#f3ede4] bg-sand" />
+                <span className="size-7 rounded-full border-2 border-cream bg-gold/70" />
+                <span className="size-7 rounded-full border-2 border-cream bg-wine/65" />
+                <span className="size-7 rounded-full border-2 border-cream bg-sand" />
               </span>
               <span>Thoughtfully selected. Made for your moment.</span>
             </div>
@@ -83,12 +83,12 @@ export default async function HomePage() {
                   <p className="text-[0.62rem] tracking-[0.24em] text-gold-light uppercase">The Lobaloba edit</p>
                   <p className="mt-2 max-w-xs font-serif text-2xl leading-tight sm:text-3xl">A little more extraordinary.</p>
                 </div>
-                <Link href="/collections" aria-label="Explore collections" className="grid size-12 shrink-0 place-items-center rounded-full border border-ivory/60 transition hover:bg-ivory hover:text-wine">
+                <Link href="/collections" aria-label="Explore collections" className="grid size-12 shrink-0 place-items-center rounded-full border border-ivory/60 transition hover:bg-ivory hover:text-onyx">
                   <ArrowRight className="size-5" />
                 </Link>
               </div>
             </div>
-            <div className="absolute -bottom-4 -left-3 hidden border border-gold/50 bg-[#f3ede4] px-4 py-3 text-[0.62rem] tracking-[0.2em] text-wine uppercase sm:block lg:-left-7">
+            <div className="absolute -bottom-4 -left-3 hidden border border-gold/50 bg-cream px-4 py-3 text-[0.62rem] tracking-[0.2em] text-wine uppercase sm:block lg:-left-7">
               Curated in Lagos · Loved everywhere
             </div>
           </div>
@@ -109,7 +109,7 @@ export default async function HomePage() {
                     <p className="mb-1 text-[0.58rem] tracking-[0.2em] text-gold-light uppercase">Discover</p>
                     <h3 className="font-serif text-lg leading-tight sm:text-2xl">{c.name}</h3>
                   </div>
-                  <span className="grid size-9 shrink-0 place-items-center rounded-full border border-ivory/60 transition group-hover:bg-ivory group-hover:text-wine">
+                  <span className="grid size-9 shrink-0 place-items-center rounded-full border border-ivory/60 transition group-hover:bg-ivory group-hover:text-onyx">
                     <ArrowRight className="size-4 transition-transform group-hover:-rotate-45" />
                   </span>
                 </div>
@@ -163,14 +163,14 @@ export default async function HomePage() {
 
       {/* F. Asoebi Lounge promotion */}
       {homepage.show_asoebi && (
-        <section className="relative overflow-hidden bg-wine text-ivory">
+        <section className="relative overflow-hidden border-y border-gold/20 bg-card text-ivory">
           <div className="container-x grid items-center gap-12 py-20 sm:py-28 lg:grid-cols-2">
             <Reveal>
               <p className="eyebrow text-gold-light">The Asoebi Lounge</p>
               <h2 className="mt-5 text-4xl leading-tight sm:text-6xl">{homepage.asoebi_heading}</h2>
               <p className="mt-6 max-w-xl leading-8 text-ivory/80">{homepage.asoebi_text}</p>
               <div className="mt-10 flex flex-wrap gap-4">
-                <Link href="/asoebi#quote" className="inline-flex h-13 items-center gap-3 bg-gold px-8 text-xs font-medium tracking-[0.24em] text-ivory uppercase transition hover:bg-gold-light hover:text-wine">
+                <Link href="/asoebi#quote" className="inline-flex h-13 items-center gap-3 bg-gold px-8 text-xs font-medium tracking-[0.24em] text-onyx uppercase transition hover:bg-gold-light hover:text-onyx">
                   Request a quotation <ArrowRight className="size-4" />
                 </Link>
                 <Link href="/asoebi" className="inline-flex h-13 items-center border border-ivory/50 px-8 text-xs font-medium tracking-[0.24em] uppercase hover:bg-ivory/10">
@@ -186,7 +186,7 @@ export default async function HomePage() {
                   ["03", "Track every guest", "See paid and unpaid guests and quantities at a glance."],
                   ["04", "Delivered beautifully", "Individually packaged and delivered — or collected together."],
                 ].map(([n, t, d]) => (
-                  <li key={n} className="bg-wine p-7">
+                  <li key={n} className="bg-card p-7">
                     <span className="font-serif text-3xl text-gold-light">{n}</span>
                     <p className="mt-3 font-serif text-2xl">{t}</p>
                     <p className="mt-2 text-sm leading-6 text-ivory/70">{d}</p>

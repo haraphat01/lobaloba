@@ -33,7 +33,7 @@ export default async function AsoebiPage() {
             From choosing the perfect fabric to collecting individual payments from every guest, our Asoebi specialists coordinate it all — so your family and friends arrive beautifully matched.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="#quote" className="bg-gold px-8 py-4 text-xs tracking-[0.24em] text-ivory uppercase hover:bg-gold-light hover:text-wine">
+            <a href="#quote" className="bg-gold px-8 py-4 text-xs tracking-[0.24em] text-onyx uppercase hover:bg-gold-light hover:text-onyx">
               Request a quotation
             </a>
             <a href="#packages" className="border border-ivory/50 px-8 py-4 text-xs tracking-[0.24em] uppercase hover:bg-ivory/10">
@@ -67,7 +67,7 @@ export default async function AsoebiPage() {
               const Icon = icons[i % icons.length];
               return (
                 <Reveal key={p.id} delay={i * 0.06} className="h-full">
-                  <article className={`flex h-full flex-col border p-8 ${i === 1 ? "border-wine bg-ivory shadow-xl shadow-wine/5" : "border-border bg-ivory"}`}>
+                  <article className={`flex h-full flex-col border p-8 ${i === 1 ? "border-wine bg-background shadow-xl shadow-wine/5" : "border-border bg-background"}`}>
                     <Icon className="size-7 text-gold" strokeWidth={1.3} />
                     <h3 className="mt-5 text-3xl">{p.name}</h3>
                     {p.tagline && <p className="mt-1 text-sm text-wine">{p.tagline}</p>}
@@ -81,7 +81,7 @@ export default async function AsoebiPage() {
                     </ul>
                     <p className="mt-8 font-serif text-2xl">{p.is_quote_based || p.price === null ? "Quotation-based" : `From ${formatMoney(p.price)}`}</p>
                     {p.price_note && <p className="text-xs text-muted-foreground">{p.price_note}</p>}
-                    <Link href="#quote" className="mt-6 bg-wine px-6 py-3.5 text-center text-xs tracking-[0.22em] text-ivory uppercase hover:bg-wine-deep">
+                    <Link href="#quote" className="mt-6 bg-wine px-6 py-3.5 text-center text-xs tracking-[0.22em] text-onyx uppercase hover:bg-gold-light">
                       Request a quote
                     </Link>
                   </article>

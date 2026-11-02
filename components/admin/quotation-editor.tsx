@@ -102,21 +102,21 @@ export function QuotationEditor({ quote, products, order }: { quote: Quote; prod
 
       <Panel title="Actions">
         <div className="flex flex-wrap gap-2 text-xs">
-          <button type="button" disabled={pending} onClick={() => run(() => saveQuotation({ ...payload(), status: q.status === "new" ? "reviewing" : undefined }))} className="h-9 rounded-sm border border-border bg-white px-4 uppercase tracking-wider">Save</button>
+          <button type="button" disabled={pending} onClick={() => run(() => saveQuotation({ ...payload(), status: q.status === "new" ? "reviewing" : undefined }))} className="h-9 rounded-sm border border-border bg-background px-4 uppercase tracking-wider">Save</button>
           {!locked && (
-            <button type="button" disabled={pending} onClick={() => run(async () => { const s = await saveQuotation(payload()); return s.ok ? sendQuotation(q.id) : s; }, () => setQ({ ...q, status: "quoted" }))} className="h-9 rounded-sm bg-wine px-4 text-ivory uppercase tracking-wider">
+            <button type="button" disabled={pending} onClick={() => run(async () => { const s = await saveQuotation(payload()); return s.ok ? sendQuotation(q.id) : s; }, () => setQ({ ...q, status: "quoted" }))} className="h-9 rounded-sm bg-wine px-4 text-onyx uppercase tracking-wider">
               {q.status === "quoted" ? "Re-send quotation" : "Send quotation"}
             </button>
           )}
           {q.status === "quoted" && (
             <>
-              <button type="button" disabled={pending} onClick={() => run(() => setQuotationStatus(q.id, "accepted"), () => setQ({ ...q, status: "accepted" }))} className="h-9 rounded-sm border border-border bg-white px-4 uppercase tracking-wider">Mark accepted</button>
-              <button type="button" disabled={pending} onClick={() => run(() => setQuotationStatus(q.id, "declined"), () => setQ({ ...q, status: "declined" }))} className="h-9 rounded-sm border border-border bg-white px-4 uppercase tracking-wider">Mark declined</button>
-              <button type="button" disabled={pending} onClick={() => run(() => setQuotationStatus(q.id, "expired"), () => setQ({ ...q, status: "expired" }))} className="h-9 rounded-sm border border-border bg-white px-4 uppercase tracking-wider">Mark expired</button>
+              <button type="button" disabled={pending} onClick={() => run(() => setQuotationStatus(q.id, "accepted"), () => setQ({ ...q, status: "accepted" }))} className="h-9 rounded-sm border border-border bg-background px-4 uppercase tracking-wider">Mark accepted</button>
+              <button type="button" disabled={pending} onClick={() => run(() => setQuotationStatus(q.id, "declined"), () => setQ({ ...q, status: "declined" }))} className="h-9 rounded-sm border border-border bg-background px-4 uppercase tracking-wider">Mark declined</button>
+              <button type="button" disabled={pending} onClick={() => run(() => setQuotationStatus(q.id, "expired"), () => setQ({ ...q, status: "expired" }))} className="h-9 rounded-sm border border-border bg-background px-4 uppercase tracking-wider">Mark expired</button>
             </>
           )}
           {q.status === "accepted" && !order && (
-            <button type="button" disabled={pending} onClick={() => run(() => convertQuotationToOrder(q.id), () => setQ({ ...q, status: "converted" }))} className="h-9 rounded-sm bg-emerald-800 px-4 text-white uppercase tracking-wider">
+            <button type="button" disabled={pending} onClick={() => run(() => convertQuotationToOrder(q.id), () => setQ({ ...q, status: "converted" }))} className="h-9 rounded-sm bg-emerald-600 px-4 text-white uppercase tracking-wider">
               Convert to order & send payment link
             </button>
           )}

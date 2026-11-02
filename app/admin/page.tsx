@@ -100,9 +100,9 @@ async function Dashboard({ searchParams }: Pick<PageProps<"/admin">, "searchPara
                 {d.lowStock.map((p) => (
                   <li key={p.id} className="flex items-center justify-between gap-2">
                     <Link href={`/admin/products/${p.id}`} className="flex items-center gap-2 truncate hover:text-wine">
-                      <AlertTriangle className="size-3.5 shrink-0 text-amber-600" aria-hidden /> {p.name}
+                      <AlertTriangle className="size-3.5 shrink-0 text-amber-400" aria-hidden /> {p.name}
                     </Link>
-                    <span className={p.total_stock === 0 ? "text-destructive" : "text-amber-700"}>{p.total_stock === 0 ? "Out of stock" : `${p.total_stock} left`}</span>
+                    <span className={p.total_stock === 0 ? "text-destructive" : "text-amber-400"}>{p.total_stock === 0 ? "Out of stock" : `${p.total_stock} left`}</span>
                   </li>
                 ))}
               </ul>

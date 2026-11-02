@@ -35,7 +35,7 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-wine text-ivory">
+      <section className="border-y border-gold/20 bg-card text-ivory">
         <div className="container-x grid gap-12 py-20 md:grid-cols-2">
           <Reveal>
             <p className="eyebrow text-gold-light">Our mission</p>
@@ -95,7 +95,7 @@ export default async function AboutPage() {
         <p className="mt-2 text-muted-foreground">
           {business.email} · {business.phone}
         </p>
-        <Link href="/contact" className="mt-8 inline-block bg-wine px-8 py-4 text-xs tracking-[0.22em] text-ivory uppercase">
+        <Link href="/contact" className="mt-8 inline-block bg-wine px-8 py-4 text-xs tracking-[0.22em] text-onyx uppercase">
           Get in touch
         </Link>
       </section>

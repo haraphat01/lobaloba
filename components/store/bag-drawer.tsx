@@ -16,7 +16,7 @@ export function BagDrawer() {
 
   return (
     <Sheet open={bagOpen} onOpenChange={setBagOpen}>
-      <SheetContent side="right" className="flex w-full flex-col gap-0 bg-ivory p-0 sm:max-w-md">
+      <SheetContent side="right" className="flex w-full flex-col gap-0 bg-background p-0 sm:max-w-md">
         <SheetHeader className="border-b border-border px-6 py-5">
           <SheetTitle className="font-serif text-2xl font-normal text-wine">
             Your bag <span className="text-base text-muted-foreground">({bagCount})</span>

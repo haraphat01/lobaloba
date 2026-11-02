@@ -37,7 +37,7 @@ function SampleDialog({ open, onOpenChange, productId, productName, colours }: {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-lg rounded-none bg-ivory">
+      <DialogContent className="max-w-lg rounded-none bg-background">
         <DialogHeader>
           <DialogTitle className="font-serif text-3xl font-normal">Request a sample</DialogTitle>
           <DialogDescription>See and feel {productName} before you buy. Our team will contact you to arrange a swatch.</DialogDescription>

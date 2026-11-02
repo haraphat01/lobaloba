@@ -74,7 +74,7 @@ export function SearchDialog({ open, onOpenChange }: { open: boolean; onOpenChan
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="top-[12vh] max-w-2xl translate-y-0 gap-0 overflow-hidden rounded-none border-border bg-ivory p-0 sm:max-w-2xl" showCloseButton={false}>
+      <DialogContent className="top-[12vh] max-w-2xl translate-y-0 gap-0 overflow-hidden rounded-none border-border bg-background p-0 sm:max-w-2xl" showCloseButton={false}>
         <DialogTitle className="sr-only">Search the catalogue</DialogTitle>
         <form
           onSubmit={(e) => {

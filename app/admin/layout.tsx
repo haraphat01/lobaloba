@@ -10,8 +10,8 @@ export const metadata: Metadata = { title: { default: "Admin", template: "%s · 
 
 export default function AdminLayout({ children }: LayoutProps<"/admin">) {
   return (
-    <div className="flex min-h-screen bg-[#f6f2ec]">
-      <aside className="fixed inset-y-0 left-0 z-40 hidden w-64 flex-col bg-wine-deep px-4 py-6 lg:flex">
+    <div className="flex min-h-screen bg-background">
+      <aside className="fixed inset-y-0 left-0 z-40 hidden w-64 flex-col border-r border-border bg-wine-deep px-4 py-6 lg:flex">
         <Link href="/admin" className="mb-8 px-3">
           <span className="font-serif text-2xl tracking-[0.3em] text-ivory">LOBALOBA</span>
           <span className="block text-[0.6rem] tracking-[0.5em] text-gold-light">ADMIN</span>

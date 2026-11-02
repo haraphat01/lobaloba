@@ -64,7 +64,7 @@ export function OrderAdminControls({
           <input type="checkbox" checked={form.notifyCustomer} onChange={(e) => setForm({ ...form, notifyCustomer: e.target.checked })} /> Email the customer about this update
         </label>
       </div>
-      <button type="button" disabled={pending} onClick={() => run(() => updateOrderStatus({ orderId: order.id, ...form }))} className="inline-flex h-9 items-center gap-2 rounded-sm bg-wine px-5 text-xs tracking-wider text-ivory uppercase">
+      <button type="button" disabled={pending} onClick={() => run(() => updateOrderStatus({ orderId: order.id, ...form }))} className="inline-flex h-9 items-center gap-2 rounded-sm bg-wine px-5 text-xs tracking-wider text-onyx uppercase">
         {pending && <Loader2 className="size-4 animate-spin" />} Update order
       </button>
 

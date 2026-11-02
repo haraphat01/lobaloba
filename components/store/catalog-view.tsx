@@ -28,7 +28,7 @@ export async function CatalogResults({ searchParams, fixed, showCategories }: { 
       <div className="min-w-0 flex-1">
         <ShopToolbar facets={facets} categories={cats} total={result.total} sortOptions={SORT_OPTIONS} showCategories={showCategories} />
         {result.products.length === 0 ? (
-          <div className="rounded-sm bg-[#f3ede4] px-5 py-20 text-center sm:py-24">
+          <div className="rounded-sm bg-cream px-5 py-20 text-center sm:py-24">
             <p className="font-serif text-3xl text-wine">No pieces match your selection</p>
             <p className="mt-3 text-sm text-muted-foreground">Try removing a filter, or ask a stylist on WhatsApp to help you find the perfect fabric.</p>
             <Link href="/shop" className="mt-6 inline-block text-xs tracking-[0.2em] text-wine uppercase underline underline-offset-4">

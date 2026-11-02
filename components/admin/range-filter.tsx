@@ -27,7 +27,7 @@ export function RangeFilter() {
             key={p.key}
             type="button"
             onClick={() => router.push(`${pathname}?range=${p.key}`)}
-            className={cn("rounded-sm px-3 py-1.5 text-xs", current === p.key ? "bg-wine text-ivory" : "hover:bg-cream")}
+            className={cn("rounded-sm px-3 py-1.5 text-xs", current === p.key ? "bg-wine text-onyx" : "hover:bg-cream")}
           >
             {p.label}
           </button>
@@ -43,7 +43,7 @@ export function RangeFilter() {
         <input type="date" aria-label="From" value={from} onChange={(e) => setFrom(e.target.value)} className="rounded-sm border border-border bg-card px-2 py-1.5" />
         <span>–</span>
         <input type="date" aria-label="To" value={to} onChange={(e) => setTo(e.target.value)} className="rounded-sm border border-border bg-card px-2 py-1.5" />
-        <button type="submit" className={cn("rounded-sm border px-3 py-1.5", current === "custom" ? "border-wine bg-wine text-ivory" : "border-border bg-card")}>
+        <button type="submit" className={cn("rounded-sm border px-3 py-1.5", current === "custom" ? "border-wine bg-wine text-onyx" : "border-border bg-card")}>
           Apply
         </button>
       </form>

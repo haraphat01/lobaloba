@@ -44,7 +44,7 @@ export function ProductShowcase({ product, children }: { product: ProductDetail;
           </div>
         )}
         <div
-          className="relative aspect-[4/5] flex-1 cursor-zoom-in overflow-hidden rounded-sm bg-[#f0e9df]"
+          className="relative aspect-[4/5] flex-1 cursor-zoom-in overflow-hidden rounded-sm bg-sand"
           onMouseMove={(e) => {
             const r = e.currentTarget.getBoundingClientRect();
             setZoom({ x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 });

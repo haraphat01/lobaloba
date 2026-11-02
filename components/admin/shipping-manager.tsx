@@ -49,7 +49,7 @@ function ZoneCard({ zone }: { zone: Zone }) {
       </div>
       <div className="mt-3 flex flex-wrap gap-3 text-xs">
         <button type="button" onClick={() => setZ({ ...z, rates: [...z.rates, { name: "", description: "", fee: "0", freeOver: "", minDays: "", maxDays: "", isActive: true }] })} className="text-wine underline">Add rate</button>
-        <button type="button" disabled={pending} onClick={() => run(() => saveShippingZone({ ...z, countries: list(z.countries), states: list(z.states) }))} className="h-8 rounded-sm bg-wine px-4 text-ivory uppercase tracking-wider">Save zone</button>
+        <button type="button" disabled={pending} onClick={() => run(() => saveShippingZone({ ...z, countries: list(z.countries), states: list(z.states) }))} className="h-8 rounded-sm bg-wine px-4 text-onyx uppercase tracking-wider">Save zone</button>
         {z.id && <button type="button" disabled={pending} onClick={() => run(() => deleteShippingZone(z.id!))} className="text-destructive underline">Delete zone</button>}
       </div>
     </Panel>

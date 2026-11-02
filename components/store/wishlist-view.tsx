@@ -47,7 +47,7 @@ export function WishlistView() {
         <Heart className="size-12 text-gold" strokeWidth={1.2} />
         <p className="font-serif text-3xl">Your wishlist is empty</p>
         <p className="text-sm text-muted-foreground">Tap the heart on any piece to save it for later.</p>
-        <Link href="/shop" className="mt-4 bg-wine px-8 py-4 text-xs tracking-[0.22em] text-ivory uppercase">
+        <Link href="/shop" className="mt-4 bg-wine px-8 py-4 text-xs tracking-[0.22em] text-onyx uppercase">
           Discover fabrics
         </Link>
       </div>
@@ -75,7 +75,7 @@ export function WishlistView() {
               {formatMoney(p.price, p.currency)} <span className="text-xs text-muted-foreground">{unitShort(p.purchaseUnit, p.unitLabel)}</span>
             </p>
             <div className="mt-3 flex gap-2">
-              <button type="button" onClick={() => moveToBag(p)} disabled={p.totalStock <= 0} className="inline-flex flex-1 items-center justify-center gap-2 bg-wine py-2.5 text-[0.65rem] tracking-[0.18em] text-ivory uppercase disabled:opacity-50">
+              <button type="button" onClick={() => moveToBag(p)} disabled={p.totalStock <= 0} className="inline-flex flex-1 items-center justify-center gap-2 bg-wine py-2.5 text-[0.65rem] tracking-[0.18em] text-onyx uppercase disabled:opacity-50">
                 <ShoppingBag className="size-3.5" /> {p.totalStock > 0 ? "Move to bag" : "Sold out"}
               </button>
               <button type="button" onClick={() => toggleWishlist(p.id, p.name)} aria-label={`Remove ${p.name}`} className="border border-border px-3 hover:text-destructive">

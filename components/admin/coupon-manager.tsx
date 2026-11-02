@@ -22,7 +22,7 @@ export function CouponManager({ coupons, products, categories }: { coupons: Coup
 
   return (
     <>
-      <button type="button" onClick={() => setC(blank)} className="mb-4 inline-flex h-9 items-center gap-2 rounded-sm bg-wine px-4 text-xs tracking-wider text-ivory uppercase">
+      <button type="button" onClick={() => setC(blank)} className="mb-4 inline-flex h-9 items-center gap-2 rounded-sm bg-wine px-4 text-xs tracking-wider text-onyx uppercase">
         <Plus className="size-4" /> New discount code
       </button>
       <div className="overflow-x-auto rounded-sm border border-border bg-card">
@@ -93,7 +93,7 @@ export function CouponManager({ coupons, products, categories }: { coupons: Coup
                 </div>
               </div>
               <label className="flex items-center gap-2"><input type="checkbox" checked={c.isActive} onChange={(e) => setC({ ...c, isActive: e.target.checked })} /> Active</label>
-              <button type="button" disabled={pending} onClick={() => run(() => saveCoupon(c), () => setC(null))} className="h-10 rounded-sm bg-wine text-xs tracking-wider text-ivory uppercase sm:col-span-2">Save discount code</button>
+              <button type="button" disabled={pending} onClick={() => run(() => saveCoupon(c), () => setC(null))} className="h-10 rounded-sm bg-wine text-xs tracking-wider text-onyx uppercase sm:col-span-2">Save discount code</button>
             </div>
           )}
         </DialogContent>

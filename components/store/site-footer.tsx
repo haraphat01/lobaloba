@@ -55,7 +55,7 @@ export function SiteFooter({ settings, categories }: { settings: SiteSettings; c
   ];
 
   return (
-    <footer className="mt-auto bg-[#32151c] text-ivory/80">
+    <footer className="mt-auto border-t border-gold/20 bg-[#050505] text-ivory/80">
       <div className="container-x grid gap-12 py-14 sm:py-16 lg:grid-cols-[0.9fr_1.7fr] lg:gap-20">
         <div className="max-w-md">
           <Logo light className="items-start" />

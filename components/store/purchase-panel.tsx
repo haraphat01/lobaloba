@@ -109,7 +109,7 @@ export function PurchasePanel({
                   aria-pressed={v.id === variantId}
                   className={cn(
                     "border px-4 py-2 text-sm transition",
-                    v.id === variantId ? "border-wine bg-wine text-ivory" : "border-border hover:border-wine",
+                    v.id === variantId ? "border-wine bg-wine text-onyx" : "border-border hover:border-wine",
                     v.stock <= 0 && "text-muted-foreground line-through",
                   )}
                 >
@@ -121,7 +121,7 @@ export function PurchasePanel({
         </fieldset>
       )}
 
-      <p className={cn("text-sm", outOfStock ? "text-destructive" : lowStock ? "text-gold" : "text-emerald-800")}>
+      <p className={cn("text-sm", outOfStock ? "text-destructive" : lowStock ? "text-gold" : "text-emerald-300")}>
         {outOfStock ? "Out of stock" : lowStock ? `Only ${variant.stock} left — order soon` : "In stock, ready to ship"}
       </p>
 
@@ -159,7 +159,7 @@ export function PurchasePanel({
               Add to bag
             </Button>
             {!compact && (
-              <Button size="lg" variant="outline" className="h-13 rounded-none border-ink text-xs tracking-[0.22em] uppercase hover:bg-ink hover:text-ivory" onClick={() => add(true)}>
+              <Button size="lg" variant="outline" className="h-13 rounded-none border-ink text-xs tracking-[0.22em] uppercase hover:bg-ink hover:text-onyx" onClick={() => add(true)}>
                 Buy now
               </Button>
             )}
